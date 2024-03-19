@@ -13,10 +13,10 @@ int main()
     //ejercicio5();
     //ejercicio6();
     //ejercicio7();
-    ejercicio8();
+    //ejercicio8();
     //ejercicio9();
     //ejercicio10();
-    //ejercicio11();
+    ejercicio11();
     //ejercicio12();
     //ejercicio13();
     //ejercicio14();
