@@ -16,8 +16,8 @@ int main()
     //ejercicio8();
     //ejercicio9();
     //ejercicio10();
-    ejercicio11();
-    //ejercicio12();
+    //ejercicio11();
+    ejercicio12();
     //ejercicio13();
     //ejercicio14();
     //ejercicio15();
