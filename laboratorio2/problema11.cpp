@@ -1,5 +1,6 @@
 #include <iostream>
-#include <iomanip>
+#include "problemas.h"
+#include <iomanip> //manipular la forma en que se muestran los datos, como establecer el ancho del campo de salida, el número de decimales mostrados
 
 /*Escribe un programa que permita manejar las reservas de asientos en una sala de cine,
 estos están organizados en 15 filas con 20 (asientos) cada una. El programa debe mostrar
@@ -36,7 +37,7 @@ public:
         for (int i = 0; i < 15; ++i) {
             cout << fila++ << " ";
             for (int j = 0; j < 20; ++j) {
-                if (asientos[i][j]) {
+                if (asientos[i][j]) { //setw(int n): Se utiliza para establecer el ancho del campo de salida en n caracteres
                     cout << setw(3) << "O"; //permite que los valores asignados salgan alineados para la matriz
                 } else {
                     cout << setw(3) << "X";

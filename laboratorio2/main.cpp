@@ -17,12 +17,12 @@ int main()
     //ejercicio9();
     //ejercicio10();
     //ejercicio11();
-    ejercicio12();
+    //ejercicio12();
     //ejercicio13();
     //ejercicio14();
     //ejercicio15();
     //ejercicio16();
-    //ejercicio17();
+    ejercicio17();
     //ejercicio18();
 
     return 0;
