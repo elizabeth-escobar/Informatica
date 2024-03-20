@@ -19,18 +19,16 @@ int sumarNumerosNCifras(int n, const string& cadena) {
     string numero;
 
     // Calculamos cuántos dígitos necesitamos agregar al primer número
-    int ceros_necesarios = (n - cadena.size() % n) % n;
+    int ceros_necesarios = (n - cadena.size() % n) % n; // Se calculan los dígitos necesarios para agregar al primer número
 
-    // Agregamos los ceros necesarios al principio de la cadena si es necesario
-    for (int i = 0; i < ceros_necesarios; ++i) {
+    for (int i = 0; i < ceros_necesarios; ++i) { //Se agregan los ceros al inicio del número
         numero += '0';
     }
 
-    // Iteramos sobre la cadena para formar números de n cifras y sumarlos
-    for (char c : cadena) {
+    for (char c : cadena) { //Se itera sobre la cadena para ir formando los numeros de n cifras
         numero += c;
         if (numero.size() == static_cast<std::string::size_type>(n)) {
-            suma += stoi(numero);
+            suma += stoi(numero); // Se van sumando los números ya formados en n cifras
             numero = ""; // Reiniciamos el número para formar el siguiente
         }
     }
@@ -46,7 +44,7 @@ int ejercicio9(){
        cout << "Ingrese el valor de n: ";
        cin >> n;
 
-       cout << "Ingrese una cadena de caracteres numéricos: ";
+       cout << "Ingrese una cadena de caracteres numericos: ";
        cin >> cadena;
 
        int resultado = sumarNumerosNCifras(n, cadena);
