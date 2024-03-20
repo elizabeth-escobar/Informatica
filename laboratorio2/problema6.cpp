@@ -22,7 +22,7 @@ void cambiarAMayuscula(string& cadena) {
 int ejercicio6(){
     string cadena;
         cout << "Ingresa una cadena de caracteres: ";
-        getline(cin, cadena);
+        getline(cin, cadena); //lee una línea completa de texto desde la entrada estándar y la almacena en un objeto string.
 
         cambiarAMayuscula(cadena);
 

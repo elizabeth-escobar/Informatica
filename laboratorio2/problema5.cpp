@@ -7,20 +7,20 @@ using namespace std;
 /*Haz una función que reciba un número entero (int) y lo convierta a cadena de caracteres.
 Usa parámetros por referencia para retornar la cadena. Escribe un programa de prueba.*/
 
-void intToString(int number, string& result) {
-    result = to_string(number); //to_string convierte el número entero en una cadena
+void enteroCadena(int numero, string& resultado) {
+    resultado = to_string(numero); //to_string convierte el número entero en una cadena
 }
 
 
 int ejercicio5(){
     int numero;
-    cout << "Ingresa un número entero: ";
+    cout << "Ingresa un numero entero: ";
     cin >> numero;
 
-    string strNumber;
-    intToString(numero, strNumber);
+    string strNumero;
+    enteroCadena(numero, strNumero);
 
-    cout << "El numero en forma de cadena de caracteres es: " << strNumber << endl;
+    cout << "El numero en forma de cadena de caracteres es: " << strNumero << endl;
 
     return 0;
 }

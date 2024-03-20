@@ -14,7 +14,7 @@ int main()
     //ejercicio6();
     //ejercicio7();
     //ejercicio8();
-    //ejercicio9();
+    ejercicio9();
     //ejercicio10();
     //ejercicio11();
     //ejercicio12();
@@ -22,7 +22,7 @@ int main()
     //ejercicio14();
     //ejercicio15();
     //ejercicio16();
-    ejercicio17();
+    //ejercicio17();
     //ejercicio18();
 
     return 0;

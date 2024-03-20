@@ -1,5 +1,6 @@
 #include <iostream>
 #include "problemas.h"
+#include <unordered_map>
 
 using namespace std;
 
@@ -12,16 +13,35 @@ amigables menores al número ingresado.*/
 
 
 
-int sumaDivisores(int num) {
-    int suma = 0;
-    for (int i = 1; i <= num / 2; ++i) {
-        if (num % i == 0) {
-            suma += i;
+int sumDivisors(int n) {
+    int sum = 1; // Suma inicia en 1 porque 1 es divisor de todos los números
+    for (int i = 2; i*i <= n; i++) {
+        if (n % i == 0) {
+            sum += i;
+            if (i != n / i) {
+                sum += n / i;
+            }
         }
     }
-    return suma + num;
-
+    return sum;
+}
 
 int ejercicio17(){
+    int numero;
 
+        cout << "Ingrese un numero: ";
+        cin >> numero;
+
+        int sum = sumDivisors(numero);
+
+        cout << "La suma de los divisores de " << numero << " es: " << sum << endl;
+        int sum2= sumDivisors(sum);
+        if (sum2==numero){
+            cout << "Son numeros amigos " << numero << " y " << sum << endl;
+        }
+        else {
+            cout << "No son numeros amigos " << endl;
+        }
+        cout << "El resultado de la suma es "<< sum2+sum << endl;
+        return 0;
     }

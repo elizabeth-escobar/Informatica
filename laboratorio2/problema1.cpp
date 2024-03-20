@@ -21,13 +21,13 @@ int ejercicio1(){
        cin >> cantidad_deseada;
        cout << "El numero escrito es: " << cantidad_deseada << endl;
 
-       int billetes_monedas[] = {50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50};// Vector de denominaciones de billetes y monedas
-       int cantidades[10] = {0}; // Vector para almacenar la cantidad de cada billete o moneda necesaria, inicialmente en 0
+       int billetes_monedas[] = {50000, 20000, 10000, 5000, 2000, 1000, 500, 200, 100, 50};// arreglo de billetes y monedas
+       int cantidades[10] = {0}; // Almacena la cantidad de cada billete o moneda necesaria, inicialmente en 0
 
 
        // Calcula la cantidad de billetes y monedas necesarios
        int size;
-       size=10; //tamaño del vector de billetes y monedas
+       size=10; //tamaño del arreglo de billetes y monedas
        for (int i = 0; i < size; i++) {
                if (cantidad_deseada >= billetes_monedas[i]) {  // Verifica si la cantidad es mayor o igual que la denominación actual
                     cantidades[i] = cantidad_deseada / billetes_monedas[i];// Calcula la cantidad de billetes o monedas necesarios y actualiza su valor

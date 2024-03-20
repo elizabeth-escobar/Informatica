@@ -13,42 +13,45 @@ se colocan ceros a la izquierda del primer número.*/
 
 //Si n=3 y se lee el arreglo 87512395 la suma sería 087+512+395=994.
 
+// Función para sumar los números de n cifras en la cadena
 int sumarNumerosNCifras(int n, const string& cadena) {
     int suma = 0;
-    int cantidad_numeros = ceil(static_cast<double>(cadena.size()) / n);
-
     string numero;
 
-    for (int i = 0; i < cantidad_numeros; ++i) {
-        for (int j = 0; j < n; ++j) {
-            if (static_cast<int>(i * n + j) < static_cast<int>(cadena.size())) { //convierte i * n + j y cadena.size() a int antes de realizar la comparación,para eliminar diferencia de signos
-            } else {
-                numero += '0'; // Agregar ceros a la izquierda si es necesario
-            }
+    // Calculamos cuántos dígitos necesitamos agregar al primer número
+    int ceros_necesarios = (n - cadena.size() % n) % n;
+
+    // Agregamos los ceros necesarios al principio de la cadena si es necesario
+    for (int i = 0; i < ceros_necesarios; ++i) {
+        numero += '0';
+    }
+
+    // Iteramos sobre la cadena para formar números de n cifras y sumarlos
+    for (char c : cadena) {
+        numero += c;
+        if (numero.size() == static_cast<std::string::size_type>(n)) {
+            suma += stoi(numero);
+            numero = ""; // Reiniciamos el número para formar el siguiente
         }
-        suma += stoi(numero);
-        numero = ""; // Reiniciamos el número para formar el siguiente
     }
 
     return suma;
 }
 
+
 int ejercicio9(){
     int n;
-        string cadena;
+       string cadena;
 
-        cout << "Ingrese el valor de n: ";
-        cin >> n;
+       cout << "Ingrese el valor de n: ";
+       cin >> n;
 
-        cin.ignore(); // Limpiamos el buffer del teclado antes de leer la cadena
-        cout << "Ingrese una cadena de caracteres numericos: ";
-        getline(cin, cadena);
+       cout << "Ingrese una cadena de caracteres numéricos: ";
+       cin >> cadena;
 
-        int resultado = sumarNumerosNCifras(n, cadena);
+       int resultado = sumarNumerosNCifras(n, cadena);
 
-        cout << "La suma de los numeros de " << n << " cifras en la cadena es: " << resultado << endl;
+       cout << "Original: " << cadena << ". Suma: " << resultado << "." << endl;
 
-        return 0;
-
- }
-
+       return 0;
+   }
